@@ -1648,6 +1648,7 @@ MonoBehaviour:
   - {fileID: 1934423993}
   - {fileID: 349148872}
   TapCollider: {fileID: 1458243657}
+  levelName: Level2
 --- !u!4 &1458243656
 Transform:
   m_ObjectHideFlags: 0

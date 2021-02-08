@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class GameController : MonoBehaviour
 {
     public SlingShooter SlingShooter;
@@ -10,6 +12,7 @@ public class GameController : MonoBehaviour
     public List<Enemy> Enemies;
     private Bird _shotBird;
     public BoxCollider2D TapCollider;
+    public string levelName;
 
     private bool _isGameEnded = false;
 
@@ -38,7 +41,8 @@ public class GameController : MonoBehaviour
 
         if (_isGameEnded)
         {
-            return;
+            // return;
+            SceneManager.LoadScene(levelName);
         }
 
         Birds.RemoveAt(0);
@@ -47,6 +51,10 @@ public class GameController : MonoBehaviour
         {
             SlingShooter.InitiateBird(Birds[0]);
             _shotBird = Birds[0];
+        }
+        else
+        {
+            _isGameEnded = true;
         }
     }
 
