@@ -8,12 +8,16 @@ public class BlackBird : Bird
     public LayerMask LayerToHit;
     public float force = 100;
     public bool isExplode = false;
+    public GameObject ExplosionEffect;
 
     public void Explode()
     {
         if (isExplode == false)
         {
             isExplode = true;
+            GameObject ExplosionEffectIns = Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
+            Destroy(ExplosionEffectIns, 10);
+
             Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, LayerToHit);
         
             foreach (Collider2D obj in objects)
@@ -22,6 +26,7 @@ public class BlackBird : Bird
 
                 obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
             }
+            
         }
 
     }

@@ -949,7 +949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804786248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -0.5, z: -0.00031552347}
+  m_LocalPosition: {x: -1.6, y: -0.5, z: -0.00031552347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1847323420}
@@ -1152,7 +1152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924027362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.980844, y: 2.3977811, z: -0.00031552347}
+  m_LocalPosition: {x: -0.7, y: -0.55, z: -0.00031552347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1847323420}
@@ -1534,6 +1534,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   force: 50
+  isExplode: 0
+  ExplosionEffect: {fileID: 5489771299843410716, guid: e5cd2b1b52c864e4680ee8d01a2761c8,
+    type: 3}
 --- !u!1 &1451410331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,8 +1640,9 @@ MonoBehaviour:
   SlingShooter: {fileID: 417660039}
   TrailController: {fileID: 676318341}
   Birds:
-  - {fileID: 924027366}
   - {fileID: 1324344430}
+  - {fileID: 924027366}
+  - {fileID: 804786253}
   - {fileID: 1104847434}
   Enemies:
   - {fileID: 1934423993}
